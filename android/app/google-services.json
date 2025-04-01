@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "425022859882",
+    "project_id": "convite-casamento-260d7",
+    "storage_bucket": "convite-casamento-260d7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:425022859882:android:999dbbdec95cd8237cf813",
+        "android_client_info": {
+          "package_name": "com.convite.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApm1ZT99oqCNP5D3NETqs-wGty2JHrAbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

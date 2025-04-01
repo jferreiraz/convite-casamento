@@ -1,0 +1,33 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "convite-casamento-260d7",
+          "appId": "1:425022859882:android:999dbbdec95cd8237cf813",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "convite-casamento-260d7",
+          "configurations": {
+            "android": "1:425022859882:android:999dbbdec95cd8237cf813",
+            "ios": "1:425022859882:ios:1bf4bafa9ee0a95d7cf813",
+            "macos": "1:425022859882:ios:1bf4bafa9ee0a95d7cf813",
+            "web": "1:425022859882:web:e43f9bdd2d99dbc47cf813",
+            "windows": "1:425022859882:web:1caec48ac97e19ab7cf813"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
