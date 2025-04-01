@@ -1,36 +1,27 @@
 # convite_casamento
 
-A new Flutter project.
+Projeto em flutter para realizar a confirmação dos convidados de um casamento, exigindo nome e telefone. Responsivo tanto para web quanto para mobile. Os dados são cadastrados e gerenciados utilizando o firebase firestore, o site se encontra no ar utilizando o firebase hosting no link abaixo: 
 
-## Getting Started
+`https://convite-casamento-260d7.web.app/`
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Realizar alterações
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-Realizar alterações
+Realiza o deploy no firebase com as alterações realizadas
 
 ```
 firebase deploy
 ```
 
-Subir site com as novas alterações
+Faz a build do site e sobe diretamente no link
 
-`flutter build web --release`
+```
+flutter build web --release
+```
 
 
-Inspiração
+### Inspiração design
+
+Design utilizado como inspiração para a criação do projeto, posteriormente as outras telas foram substituidas por modais visando acessibilidade e uma melhor fluídez dentro do site.
 
 ![1743477610588](image/README/1743477610588.png)
-
-
-Código Rodando:
-
-https://convite-casamento-260d7.web.app/
