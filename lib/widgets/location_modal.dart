@@ -1,3 +1,6 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
+// import 'dart:io' show Platform;
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -52,10 +55,17 @@ class _LocationModalState extends State<LocationModal> {
               onPressed: () async {
                 final url = Uri.parse(
                     'https://www.google.com/maps/place/Residencial+Yes/@-15.8393962,-48.0417283,17z/data=!4m6!3m5!1s0x935a328a77aa92c5:0xd0e3b44ce8549c07!8m2!3d-15.838746!4d-48.04087!16s%2Fg%2F11b6ns6f6l?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D');
-                if (await canLaunchUrl(url)) {
-                  await launchUrl(url, mode: LaunchMode.externalApplication);
+
+                if (kIsWeb) {
+                  // Se for Flutter Web, abre em uma nova aba
+                  html.window.open(url.toString(), '_blank');
                 } else {
-                  throw 'Não foi possível abrir o link: $url';
+                  // Se não for Web, tenta abrir no app externo
+                  if (await canLaunchUrl(url)) {
+                    await launchUrl(url, mode: LaunchMode.externalApplication);
+                  } else {
+                    throw 'Não foi possível abrir o link: $url';
+                  }
                 }
               },
               icon: const Icon(Icons.map, color: Colors.white),
@@ -71,6 +81,7 @@ class _LocationModalState extends State<LocationModal> {
                 textStyle: const TextStyle(fontSize: 18),
               ),
             ),
+
             const SizedBox(height: 10),
           ],
         ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'dart:html' as html; // Apenas para Flutter Web
 
 class GiftModal extends StatefulWidget {
   @override
@@ -7,15 +9,29 @@ class GiftModal extends StatefulWidget {
 }
 
 class _GiftModalState extends State<GiftModal> {
+  Future<void> _launchUrl(String url) async {
+    final uri = Uri.parse(url);
+
+    if (kIsWeb) {
+      // Se for Web, abre em uma nova aba
+      html.window.open(uri.toString(), '_blank');
+    } else {
+      // Se for Mobile ou Desktop, abre no aplicativo correspondente
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri, mode: LaunchMode.externalApplication);
+      } else {
+        throw 'Não foi possível abrir o link: $url';
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-          horizontal: 16, vertical: 20), // Ajuste o padding
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
       child: SingleChildScrollView(
         child: Column(
-          mainAxisSize: MainAxisSize
-              .min, // Garante que o modal ocupe o menor espaço possível
+          mainAxisSize: MainAxisSize.min,
           children: [
             const Text(
               'Lista de Presentes de Casamento 🎁',
@@ -44,15 +60,8 @@ class _GiftModalState extends State<GiftModal> {
             ),
             const SizedBox(height: 10),
             ElevatedButton.icon(
-              onPressed: () async {
-                final url =
-                    Uri.parse('https://www.instagram.com/bellacasabella/');
-                if (await canLaunchUrl(url)) {
-                  await launchUrl(url, mode: LaunchMode.externalApplication);
-                } else {
-                  throw 'Não foi possível abrir o link: $url';
-                }
-              },
+              onPressed: () =>
+                  _launchUrl('https://www.instagram.com/bellacasabella/'),
               icon: const Icon(Icons.shopping_cart, color: Colors.white),
               label: const Text(
                 'Ir para o Instagram',
@@ -79,15 +88,8 @@ class _GiftModalState extends State<GiftModal> {
             ),
             const SizedBox(height: 10),
             ElevatedButton.icon(
-              onPressed: () async {
-                final url = Uri.parse(
-                    'https://www.camicado.com.br/lista/convidado/rogeriodinizecarladiniz');
-                if (await canLaunchUrl(url)) {
-                  await launchUrl(url, mode: LaunchMode.externalApplication);
-                } else {
-                  throw 'Não foi possível abrir o link: $url';
-                }
-              },
+              onPressed: () => _launchUrl(
+                  'https://www.camicado.com.br/lista/convidado/rogeriodinizecarladiniz'),
               icon: const Icon(Icons.shopping_cart, color: Colors.white),
               label: const Text(
                 'Ir para a Camicado',

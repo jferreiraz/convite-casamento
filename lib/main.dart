@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Wedding Invitation',
+      title: 'Convite de Casamento - Carla e Rogerio',
       theme: ThemeData(
         primarySwatch: Colors.pink,
         scaffoldBackgroundColor: Colors.white,
