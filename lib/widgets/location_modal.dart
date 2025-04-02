@@ -36,9 +36,9 @@ class _LocationModalState extends State<LocationModal> {
             const SizedBox(height: 30),
 
             const Text(
-              '📌 Residencial Yes - Águas Claras\n'
-              '🏠 Quadra 210, Lote 08, Brasília - DF\n'
-              '📅 Dia 25 de Abril às 13h',
+              '📌 Residencial XXXX - XXXXX XXXXXX\n'
+              '🏠 Quadra XXXXX, Lote XXXX, Brasília - DF\n'
+              '📅 Dia XX de XXXXX às XXXh',
               style: TextStyle(fontSize: 18),
               textAlign: TextAlign.center,
             ),
@@ -54,7 +54,7 @@ class _LocationModalState extends State<LocationModal> {
             ElevatedButton.icon(
               onPressed: () async {
                 final url = Uri.parse(
-                    'https://www.google.com/maps/place/Residencial+Yes/@-15.8393962,-48.0417283,17z/data=!4m6!3m5!1s0x935a328a77aa92c5:0xd0e3b44ce8549c07!8m2!3d-15.838746!4d-48.04087!16s%2Fg%2F11b6ns6f6l?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoASAFQAw%3D%3D');
+                    'https://www.google.com/maps/place/Rodovi%C3%A1ria+de+Bras%C3%ADlia/@-15.7950005,-47.8922803,15z/data=!4m10!1m2!2m1!1srodoviaria+bsb!3m6!1s0x935a3b1d7f4418f3:0x50555a7d3fcdcb31!8m2!3d-15.7940086!4d-47.8825325!15sCg5yb2RvdmlhcmlhIGJzYpIBEHRydWNraW5nX2NvbXBhbnngAQA!16s%2Fg%2F11fy42j38b?entry=ttu&g_ep=EgoyMDI1MDMzMC4wIKXMDSoASAFQAw%3D%3D');
 
                 if (kIsWeb) {
                   // Se for Flutter Web, abre em uma nova aba

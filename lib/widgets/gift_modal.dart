@@ -49,19 +49,18 @@ class _GiftModalState extends State<GiftModal> {
             ),
             const SizedBox(height: 20),
             const Text(
-              'Instagram da Bella Casa Enxovais e Decorações',
+              'Instagram da XXXX e Decorações',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             const Text(
-              'Confira alguns itens interessantes diretamente no Instagram da Bella Casa. Tem várias opções para ajudar a montar o nosso novo lar!',
+              'Confira alguns itens interessantes diretamente no Instagram da XXXXX. Tem várias opções para ajudar a montar o nosso novo lar!',
               style: TextStyle(fontSize: 16, color: Colors.black54),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
             ElevatedButton.icon(
-              onPressed: () =>
-                  _launchUrl('https://www.instagram.com/bellacasabella/'),
+              onPressed: () => _launchUrl('https://www.instagram.com/'),
               icon: const Icon(Icons.shopping_cart, color: Colors.white),
               label: const Text(
                 'Ir para o Instagram',
@@ -77,22 +76,22 @@ class _GiftModalState extends State<GiftModal> {
             ),
             const SizedBox(height: 20),
             const Text(
-              'Nossa lista oficial na Camicado',
+              'Nossa lista oficial na XXXXX',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             const Text(
-              'Outra opção é a nossa lista na Camicado, onde você pode escolher entre uma grande variedade de itens para o lar.',
+              'Outra opção é a nossa lista na XXXXXX, onde você pode escolher entre uma grande variedade de itens para o lar.',
               style: TextStyle(fontSize: 16, color: Colors.black54),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () => _launchUrl(
-                  'https://www.camicado.com.br/lista/convidado/rogeriodinizecarladiniz'),
+                  'https://www.bellaenxovais.com.br/?srsltid=AfmBOorm_5DpIZGsKBsez3Z3wT10eCr9vjXT97V4CCuKq_SdSDDlDowC'),
               icon: const Icon(Icons.shopping_cart, color: Colors.white),
               label: const Text(
-                'Ir para a Camicado',
+                'Ir para a XXXX',
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),

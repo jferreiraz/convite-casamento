@@ -67,7 +67,7 @@ class ResponsiveContainer extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   const Text(
-                    'Rogério Diniz e Carla Diniz esperam por você no dia 25 de abril, às 13h, para a celebração do seu casamento. Confirme sua presença abaixo, confira a localização e veja como contribuir com nossa lista de presentes! 🥳🥳',
+                    'XXXX e YYYY esperam por você no dia XX de XXXX, às XXh, para a celebração do seu casamento. Confirme sua presença abaixo, confira a localização e veja como contribuir com nossa lista de presentes! 🥳🥳',
                     style: TextStyle(
                       fontSize: 16,
                     ),
